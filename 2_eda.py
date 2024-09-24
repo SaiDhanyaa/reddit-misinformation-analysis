@@ -1,7 +1,11 @@
 import pandas as pd
+import os
 from collections import Counter
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
+
+# Create 'plots' directory if it doesn't exist
+os.makedirs('plots', exist_ok=True)
 
 # Load the cleaned Reddit data
 # The CSV file 'cleaned_reddit_posts.csv' contains the cleaned Reddit posts after preprocessing (e.g., removing stopwords, punctuation).
@@ -34,16 +38,27 @@ plt.barh(word_freq_df['Word'], word_freq_df['Frequency'], color='skyblue')  # Ho
 plt.xlabel('Frequency')  # Label for the x-axis (number of occurrences of each word)
 plt.title('Top 20 Most Frequent Words in Reddit Posts')  # Title of the plot
 plt.gca().invert_yaxis()  # Invert y-axis so the most frequent words are at the top
-plt.show()  # Display the plot
+
+# Save the bar chart as an image
+plt.savefig('plots/top_20_words_bar_chart.png', bbox_inches='tight')  # Save with tight bounding box
+
+# Display the plot
+plt.show()  # Display the bar chart
+
 
 # Generate a Word Cloud
 # A word cloud is a visual representation of text data where more frequent words appear larger.
 # We generate a word cloud from the concatenated text ('all_words') using the WordCloud library.
 wordcloud = WordCloud(width=800, height=400, background_color='white').generate(all_words)
 
-# Display the Word Cloud
-# We display the word cloud as an image using Matplotlib.
+# Display and save the Word Cloud
 plt.figure(figsize=(10, 6))  # Set the figure size for the word cloud
 plt.imshow(wordcloud, interpolation='bilinear')  # 'bilinear' interpolation for smooth display of the word cloud
 plt.axis('off')  # Remove axis labels for a cleaner display
+
+# Save the word cloud as an image
+plt.savefig('plots/word_cloud.png', bbox_inches='tight')  # Save with tight bounding box
+
+# Display the word cloud
 plt.show()  # Display the word cloud
+
