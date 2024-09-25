@@ -84,6 +84,36 @@ pip install pandas numpy nltk gensim scikit-learn matplotlib wordcloud
 - **Classification Model**: Trains a Naive Bayes classifier.
 
 ---
+## 📊 Final Results
+
+### 1. **Evaluation Metrics**
+
+The model was trained using a Naive Bayes classifier and evaluated using accuracy, precision, recall, and F1-score metrics.
+
+- **Accuracy**: 83.33%
+- **Precision**: 86.11%
+- **Recall**: 83.33%
+- **F1 Score**: 75.76%
+
+You can find the detailed classification report and evaluation metrics in the results folder:
+- [Classification Report](results/classification_report.txt)
+- [Evaluation Metrics](results/evaluation_metrics.txt)
+
+### 2. **Confusion Matrix**
+
+The confusion matrix visualizes the classification performance of the model:
+
+![Confusion Matrix](results/confusion_matrix.png)
+
+### 3. **Word Frequency Analysis**
+
+We performed exploratory data analysis to identify the most common words used in the dataset. Below is a bar chart showing the top 20 most frequent words:
+
+![Top 20 Words](plots/top_20_words_bar_chart.png)
+
+Additionally, here is a word cloud that visualizes the most frequent words:
+
+![Word Cloud](plots/word_cloud.png)
 
 ## 🔧 Future Improvements
 
