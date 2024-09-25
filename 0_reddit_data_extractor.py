@@ -3,8 +3,8 @@ import pandas as pd
 
 # Reddit API credentials: These are the details you get when you create an app on Reddit.
 # They allow you to authenticate and interact with Reddit's API.
-client_id = 'bgKcbuJwuzxc5rf9IsU3cw'  # Unique ID for your Reddit app
-client_secret = 'i-mAQI5whBaY7o6JQhWMq8E_ah1tyQ'  # Secret key for your Reddit app
+client_id =   # Unique ID for your Reddit app
+client_secret =  # Secret key for your Reddit app
 user_agent = 'DHANYAPRIYA SOMASUNDARAM Social Media Data Scraper'  # A descriptive name for your app/script
 
 # Authenticate with Reddit: This step creates a Reddit instance using the credentials.
